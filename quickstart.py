@@ -13,8 +13,11 @@ gt.graph_draw(g1, vertex_text=g1.vertex_index, vertex_font_size=18, output_size=
 
 for vertex in g.vertices():
 	print(vertex, vertex.out_degree(), vertex.in_degree()) #this is slow as loops are performed in pure python, fastest method is below
+
 print(g.get_vertices())
 print(g.get_out_degrees(g.get_vertices()))
 print(g.get_in_degrees(g.get_vertices()))
 #edges = g.get_edges()
 #print((edges[:,0] * edges[:,1]).sum())
+
+
