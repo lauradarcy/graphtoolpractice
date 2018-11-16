@@ -1,0 +1,10 @@
+*.swp
+*.pyc
+*.py~
+
+# Virtualenv
+/env
+
+# PyCharm project files
+.idea
+vizdoom.ini
