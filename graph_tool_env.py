@@ -7,12 +7,12 @@ from graph_tool.all import *
 class graph_tool_env(gym.Env):
     """
     """
-    def __init__(self):
-        self.range = 1000  # Randomly selected number is within +/- this value
-        self.bounds = 10000
+    def __init__(self, network_size = 10, input_nodes = 3):
+        self.network_size = network_size
+        self.input_nodes = input_nodes
 
-        self.action_space = spaces.Box(low=np.array([-self.bounds]), high=np.array([self.bounds]))
-        self.observation_space = spaces.Discrete(4)
+        self.action_space = spaces.Tuple((spaces.Discrete(self.network_size), spaces.Discrete(self.network_size)))
+        self.observation_space = spaces.MultiDiscrete(np.full((self.network_size,self.network_size),2))
 
         self.number = 0
         self.guess_count = 0
