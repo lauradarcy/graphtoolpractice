@@ -63,23 +63,24 @@ def check_acyclic_choice(graph, possible_nodes, source_node):
             print(node, " not a valid node")
     return valid_nodes
 
-action_space()
+action_space(g)
 print("allpaths", list(all_paths(g, 6, 0)))
 if not list(all_paths(g, 6, 0)):
     print("EMPTY")
-add_edge()
-action_space()
+add_edge(g)
+action_space(g)
 for path in all_paths(g, 6, 0):
     print("path", path)
 print("all paths", list(all_paths(g, 6, 0)))
 test = adjacency(g)
 print(test.toarray())
-add_edge()
-action_space()
+print('adj2',adjacency_m.toarray())
+add_edge(g)
+action_space(g)
 test = adjacency(g)
 print(test.toarray())
-add_edge()
-action_space()
+add_edge(g)
+action_space(g)
 test = adjacency(g)
 
 print(test.toarray())

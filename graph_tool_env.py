@@ -10,6 +10,9 @@ class graph_tool_env(gym.Env):
     def __init__(self, network_size = 10, input_nodes = 3):
         self.network_size = network_size
         self.input_nodes = input_nodes
+        self.graph = Graph()
+        self.graph.set_fast_edge_removal(True)
+        self.graph.add_vertex(self.network_size)
 
         self.action_space = spaces.Tuple((spaces.Discrete(self.network_size), spaces.Discrete(self.network_size)))
         self.observation_space = spaces.MultiDiscrete(np.full((self.network_size,self.network_size),2))
