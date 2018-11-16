@@ -3,8 +3,9 @@
 *.py~
 
 # Virtualenv
-/env
+/venv
 
 # PyCharm project files
+/.idea
 .idea
 vizdoom.ini
